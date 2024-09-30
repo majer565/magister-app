@@ -1,29 +1,52 @@
 .container {
-  border: 2px solid #544455;
+  border: 2px solid var(--color-primary);
   border-radius: 0.4rem;
-  min-width: 30rem;
-  min-height: 5rem;
+  min-width: var(--todo-min-width);
+  min-height: var(--todo-min-height);
+  max-height: var(--todo-max-height);
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(184, 177, 192, 1);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(184, 177, 192, 1);
-  box-shadow: 0px 0px 2px 0px rgba(184, 177, 192, 1);
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  --sb-thumb-color: var(--color-accent);
+  --sb-size: 4px;
+  overflow-y: scroll;
 }
 
 .date {
   font-size: small;
-  color: #a28ca1;
+  color: var(--color-accent);
 }
 
 .icon {
   display: flex;
   align-items: center;
-  color: #a28ca1;
+  color: var(--color-secondary);
+}
+
+.textContainer::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+.textContainer::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.textContainer::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .textContainer {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }

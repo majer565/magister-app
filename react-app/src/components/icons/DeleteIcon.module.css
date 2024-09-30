@@ -1,0 +1,15 @@
+.iconButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.iconButton svg {
+    stroke: var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+.iconButton:hover svg {
+    stroke: var(--color-text);
+}
