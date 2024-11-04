@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  --color-text: #EFE8F8;
-  --color-background: #0B0511;
-  --color-primary: #B691DC;
-  --color-secondary: #86812A;
-  --color-accent: #73C954;
+  --color-text: #e8e8eb;
+  --color-background: #07070b;
+  --color-primary: #a5a1d3;
+  --color-secondary: #2d2779;
+  --color-accent: #5e54dc;
   --grid-gap: 2rem;
   --todo-min-width: 30rem;
   --todo-min-height: 3rem;
@@ -13,6 +13,7 @@
   --sb-track-color: var(--color-background);
   --sb-thumb-color: var(--color-primary);
   --sb-size: 8px;
+  --todo-border: rgba(165, 161, 211, 0.2);
 }
 
 body {

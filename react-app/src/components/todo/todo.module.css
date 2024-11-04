@@ -1,5 +1,5 @@
 .container {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--todo-border);
   border-radius: 0.4rem;
   min-width: var(--todo-min-width);
   min-height: var(--todo-min-height);
@@ -30,7 +30,7 @@
 }
 
 .textContainer::-webkit-scrollbar {
-  width: var(--sb-size)
+  width: var(--sb-size);
 }
 
 .textContainer::-webkit-scrollbar-track {
@@ -41,12 +41,10 @@
 .textContainer::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
-  
 }
 
 @supports not selector(::-webkit-scrollbar) {
   .textContainer {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
